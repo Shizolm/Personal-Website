@@ -82,7 +82,7 @@ let swiperPortfolio = new Swiper(".swiper", {
     },
     breakpoints: {
         565:{
-            slidesPerView: 2,
+            slidesPerView: 1,
         }
     }
   });
@@ -156,3 +156,52 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+/*==================== EMAIL JS ====================*/
+
+const contactForm = document.getElementById('contact-form'),
+      contactName = document.getElementById('contact-name'),
+      contactEmail = document.getElementById('contact-email'),
+      contactProject = document.getElementById('contact-project'),
+      contactMessage = document.getElementById('contact-message'),
+      alertMessage = document.getElementById('alert-message')
+
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    // Check f the field has a value
+    if(contactName.value === '' || contactEmail.value === '' || contactProject.value === '' || contactMessage.value === ''){
+        // Add and Remove Color
+        alertMessage.classList.remove('color-blue')
+        alertMessage.classList.add('color-red')
+
+        // Show Message
+        alertMessage.textContent = 'Write all the input field'
+
+    }else {
+        // serviceID - TemplateID - #form - publicKey
+        emailjs.sendForm('service_lue153r','template_xv6cu9q','#contact-form','Us_XH_9H3NA8ds0H1')
+        .then(() =>{
+            // Show and add color
+            alertMessage.classList.add('color-blue')
+            alertMessage.textContent = 'Message sent!'
+
+            // Remove message after 5 seconds
+            setTimeout(() =>{
+                alertMessage.textContent = ''
+            }, 5000)
+
+        }, (error) =>{
+            alert ('oops! SOMETHING WENT WRONG...', error)
+        })
+
+        // Clear input field
+        contactName.value = ''
+        contactEmail.value = ''
+        contactProject.value = ''
+        contactMessage.value = ''
+    }
+
+}
+contactForm.addEventListener('submit', sendEmail)
