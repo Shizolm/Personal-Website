@@ -811,7 +811,7 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen  and (max-width: 350px){
+@media screen  and (max-width: 480px){
 
   .container{
     margin-left: var(--mb-1);
@@ -861,22 +861,6 @@ img {
   }
 
   
-  .testimonial_data,
-  .testimonial_header{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .testimonial_img {
-    margin-left: 0;
-    margin-bottom: var(--mb-0-25);
-  }
-
-  .testimonial_data,
-  .testimonial_description{
-    text-align: center;
-  }
-  
 }
 
 /* For medium devices */
@@ -899,22 +883,6 @@ img {
     padding-right: 1rem;
   }
 
-  .testimonial_data,
-  .testimonial_header{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .testimonial_img {
-    margin-left: 0;
-    margin-bottom: var(--mb-0-25);
-  }
-
-  .testimonial_data,
-  .testimonial_description{
-    text-align: center;
-  }
-
   .services_container,
   .portfolio_content,
   .project_container,
@@ -924,7 +892,6 @@ img {
   }
 
 }
-
 
 
 @media screen  and (min-width: 768px){
