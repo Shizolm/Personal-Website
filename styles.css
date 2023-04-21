@@ -806,7 +806,7 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen  and (max-width: 350px){
+@media screen  and (max-width: 479px){
 
   .container{
     margin-left: var(--mb-1);
