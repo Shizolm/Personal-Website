@@ -806,7 +806,7 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen  and (max-width: 479px){
+@media screen  and (max-width: 350px){
 
   .container{
     margin-left: var(--mb-1);
@@ -893,6 +893,22 @@ img {
   .about_container {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .testimonial_data,
+  .testimonial_header{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial_img {
+    margin-left: 0;
+    margin-bottom: var(--mb-0-25);
+  }
+
+  .testimonial_data,
+  .testimonial_description{
+    text-align: center;
   }
 
   .services_container,
