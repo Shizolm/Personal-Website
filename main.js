@@ -81,7 +81,7 @@ let swiperPortfolio = new Swiper(".swiper", {
       dynamicBullets: true,
     },
     breakpoints: {
-        565:{
+        480:{
             slidesPerView: 1,
         }
     }

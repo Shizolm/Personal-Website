@@ -595,18 +595,23 @@ img {
 .testimonial_data,
 .testimonial_header{
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .testimonial_data {
   justify-content: space-between;
   margin-bottom: var(--mb-1);
+  text-align: center;
 }
 
 .testimonial_img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  margin-right: var(--mb-0-75);
+  margin-left: 0;
+  margin-bottom: var(--mb-0-25);
+  
 }
 
 .testimonial_name {
@@ -856,7 +861,6 @@ img {
   }
 
   
-
   .testimonial_data,
   .testimonial_header{
     flex-direction: column;
