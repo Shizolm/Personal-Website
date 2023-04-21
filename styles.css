@@ -415,16 +415,14 @@ img {
 /*==================== ABOUT ====================*/
 
 .about_container {
-  display: flex;
-  max-width: 800px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.about_description {
+.about_container p {
   text-align: center;
 }
 
@@ -811,6 +809,11 @@ img {
     width: 180px;
   }
 
+  .about_container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .services_container {
     grid-template-columns: max-content;
     justify-content: center;
@@ -860,6 +863,12 @@ img {
     order: 1;
     justify-content: center;
   }
+
+  .about_container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .services_container,
   .portfolio_content,
   .project_container,
@@ -946,8 +955,9 @@ img {
     margin-left: 3rem;
   }
 
-  .about_description {
-    text-align: center;
+   .about_container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .services_icon {
@@ -1032,6 +1042,11 @@ img {
 
   .home_social {
     transform: translateX(-6rem);
+  }
+
+  .about_container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .portfolio_content {
